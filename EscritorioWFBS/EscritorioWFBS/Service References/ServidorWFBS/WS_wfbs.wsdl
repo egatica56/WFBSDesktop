@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WebService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_wfbs" targetNamespace="http://WebService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:9106/ServicioWFBS/WS_wfbs?xsd=1" namespace="http://WebService/" />
+    </xsd:schema>
+  </types>
+  <message name="login">
+    <part name="parameters" element="tns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="tns:loginResponse" />
+  </message>
+  <message name="listarObservaciones">
+    <part name="parameters" element="tns:listarObservaciones" />
+  </message>
+  <message name="listarObservacionesResponse">
+    <part name="parameters" element="tns:listarObservacionesResponse" />
+  </message>
+  <message name="modificarCompetencia">
+    <part name="parameters" element="tns:modificarCompetencia" />
+  </message>
+  <message name="modificarCompetenciaResponse">
+    <part name="parameters" element="tns:modificarCompetenciaResponse" />
+  </message>
+  <message name="eliminarCompetencia">
+    <part name="parameters" element="tns:eliminarCompetencia" />
+  </message>
+  <message name="eliminarCompetenciaResponse">
+    <part name="parameters" element="tns:eliminarCompetenciaResponse" />
+  </message>
+  <message name="listarCompetencia">
+    <part name="parameters" element="tns:listarCompetencia" />
+  </message>
+  <message name="listarCompetenciaResponse">
+    <part name="parameters" element="tns:listarCompetenciaResponse" />
+  </message>
+  <message name="eliminarObservacion">
+    <part name="parameters" element="tns:eliminarObservacion" />
+  </message>
+  <message name="eliminarObservacionResponse">
+    <part name="parameters" element="tns:eliminarObservacionResponse" />
+  </message>
+  <message name="modificarObservacion">
+    <part name="parameters" element="tns:modificarObservacion" />
+  </message>
+  <message name="modificarObservacionResponse">
+    <part name="parameters" element="tns:modificarObservacionResponse" />
+  </message>
+  <message name="listarTiposUsuarios">
+    <part name="parameters" element="tns:listarTiposUsuarios" />
+  </message>
+  <message name="listarTiposUsuariosResponse">
+    <part name="parameters" element="tns:listarTiposUsuariosResponse" />
+  </message>
+  <message name="eliminarTipoUsuario">
+    <part name="parameters" element="tns:eliminarTipoUsuario" />
+  </message>
+  <message name="eliminarTipoUsuarioResponse">
+    <part name="parameters" element="tns:eliminarTipoUsuarioResponse" />
+  </message>
+  <message name="insertarObservacion">
+    <part name="parameters" element="tns:insertarObservacion" />
+  </message>
+  <message name="insertarObservacionResponse">
+    <part name="parameters" element="tns:insertarObservacionResponse" />
+  </message>
+  <message name="modificarTipoUsuario">
+    <part name="parameters" element="tns:modificarTipoUsuario" />
+  </message>
+  <message name="modificarTipoUsuarioResponse">
+    <part name="parameters" element="tns:modificarTipoUsuarioResponse" />
+  </message>
+  <message name="insertarTipoUsuario">
+    <part name="parameters" element="tns:insertarTipoUsuario" />
+  </message>
+  <message name="insertarTipoUsuarioResponse">
+    <part name="parameters" element="tns:insertarTipoUsuarioResponse" />
+  </message>
+  <message name="buscarTipoUsuario">
+    <part name="parameters" element="tns:buscarTipoUsuario" />
+  </message>
+  <message name="buscarTipoUsuarioResponse">
+    <part name="parameters" element="tns:buscarTipoUsuarioResponse" />
+  </message>
+  <message name="insertarCompetencia">
+    <part name="parameters" element="tns:insertarCompetencia" />
+  </message>
+  <message name="insertarCompetenciaResponse">
+    <part name="parameters" element="tns:insertarCompetenciaResponse" />
+  </message>
+  <message name="listarPerfilCompetencia">
+    <part name="parameters" element="tns:listarPerfilCompetencia" />
+  </message>
+  <message name="listarPerfilCompetenciaResponse">
+    <part name="parameters" element="tns:listarPerfilCompetenciaResponse" />
+  </message>
+  <message name="insertarPerfilComp">
+    <part name="parameters" element="tns:insertarPerfilComp" />
+  </message>
+  <message name="insertarPerfilCompResponse">
+    <part name="parameters" element="tns:insertarPerfilCompResponse" />
+  </message>
+  <message name="listarCompSegunPerfil">
+    <part name="parameters" element="tns:listarCompSegunPerfil" />
+  </message>
+  <message name="listarCompSegunPerfilResponse">
+    <part name="parameters" element="tns:listarCompSegunPerfilResponse" />
+  </message>
+  <message name="eliminarPerfil">
+    <part name="parameters" element="tns:eliminarPerfil" />
+  </message>
+  <message name="eliminarPerfilResponse">
+    <part name="parameters" element="tns:eliminarPerfilResponse" />
+  </message>
+  <message name="modificarPerfil">
+    <part name="parameters" element="tns:modificarPerfil" />
+  </message>
+  <message name="modificarPerfilResponse">
+    <part name="parameters" element="tns:modificarPerfilResponse" />
+  </message>
+  <message name="buscarNivel">
+    <part name="parameters" element="tns:buscarNivel" />
+  </message>
+  <message name="buscarNivelResponse">
+    <part name="parameters" element="tns:buscarNivelResponse" />
+  </message>
+  <message name="insertarNivel">
+    <part name="parameters" element="tns:insertarNivel" />
+  </message>
+  <message name="insertarNivelResponse">
+    <part name="parameters" element="tns:insertarNivelResponse" />
+  </message>
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
+  </message>
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
+  </message>
+  <message name="insertarPerfil">
+    <part name="parameters" element="tns:insertarPerfil" />
+  </message>
+  <message name="insertarPerfilResponse">
+    <part name="parameters" element="tns:insertarPerfilResponse" />
+  </message>
+  <message name="buscarTodoNivel">
+    <part name="parameters" element="tns:buscarTodoNivel" />
+  </message>
+  <message name="buscarTodoNivelResponse">
+    <part name="parameters" element="tns:buscarTodoNivelResponse" />
+  </message>
+  <message name="insertarPersona">
+    <part name="parameters" element="tns:insertarPersona" />
+  </message>
+  <message name="insertarPersonaResponse">
+    <part name="parameters" element="tns:insertarPersonaResponse" />
+  </message>
+  <message name="modificarUsuario">
+    <part name="parameters" element="tns:modificarUsuario" />
+  </message>
+  <message name="modificarUsuarioResponse">
+    <part name="parameters" element="tns:modificarUsuarioResponse" />
+  </message>
+  <message name="listarPerfiles">
+    <part name="parameters" element="tns:listarPerfiles" />
+  </message>
+  <message name="listarPerfilesResponse">
+    <part name="parameters" element="tns:listarPerfilesResponse" />
+  </message>
+  <message name="listarPersona">
+    <part name="parameters" element="tns:listarPersona" />
+  </message>
+  <message name="listarPersonaResponse">
+    <part name="parameters" element="tns:listarPersonaResponse" />
+  </message>
+  <message name="insertarUsuario">
+    <part name="parameters" element="tns:insertarUsuario" />
+  </message>
+  <message name="insertarUsuarioResponse">
+    <part name="parameters" element="tns:insertarUsuarioResponse" />
+  </message>
+  <message name="modificarNivel">
+    <part name="parameters" element="tns:modificarNivel" />
+  </message>
+  <message name="modificarNivelResponse">
+    <part name="parameters" element="tns:modificarNivelResponse" />
+  </message>
+  <message name="eliminarNivel">
+    <part name="parameters" element="tns:eliminarNivel" />
+  </message>
+  <message name="eliminarNivelResponse">
+    <part name="parameters" element="tns:eliminarNivelResponse" />
+  </message>
+  <message name="listarSexos">
+    <part name="parameters" element="tns:listarSexos" />
+  </message>
+  <message name="listarSexosResponse">
+    <part name="parameters" element="tns:listarSexosResponse" />
+  </message>
+  <message name="listarComunas">
+    <part name="parameters" element="tns:listarComunas" />
+  </message>
+  <message name="listarComunasResponse">
+    <part name="parameters" element="tns:listarComunasResponse" />
+  </message>
+  <message name="listarEstados">
+    <part name="parameters" element="tns:listarEstados" />
+  </message>
+  <message name="listarEstadosResponse">
+    <part name="parameters" element="tns:listarEstadosResponse" />
+  </message>
+  <message name="modificarPersona">
+    <part name="parameters" element="tns:modificarPersona" />
+  </message>
+  <message name="modificarPersonaResponse">
+    <part name="parameters" element="tns:modificarPersonaResponse" />
+  </message>
+  <portType name="WS_wfbs">
+    <operation name="login">
+      <input wsam:Action="http://WebService/WS_wfbs/loginRequest" message="tns:login" />
+      <output wsam:Action="http://WebService/WS_wfbs/loginResponse" message="tns:loginResponse" />
+    </operation>
+    <operation name="listarObservaciones">
+      <input wsam:Action="http://WebService/WS_wfbs/listarObservacionesRequest" message="tns:listarObservaciones" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarObservacionesResponse" message="tns:listarObservacionesResponse" />
+    </operation>
+    <operation name="modificarCompetencia">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarCompetenciaRequest" message="tns:modificarCompetencia" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarCompetenciaResponse" message="tns:modificarCompetenciaResponse" />
+    </operation>
+    <operation name="eliminarCompetencia">
+      <input wsam:Action="http://WebService/WS_wfbs/eliminarCompetenciaRequest" message="tns:eliminarCompetencia" />
+      <output wsam:Action="http://WebService/WS_wfbs/eliminarCompetenciaResponse" message="tns:eliminarCompetenciaResponse" />
+    </operation>
+    <operation name="listarCompetencia">
+      <input wsam:Action="http://WebService/WS_wfbs/listarCompetenciaRequest" message="tns:listarCompetencia" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarCompetenciaResponse" message="tns:listarCompetenciaResponse" />
+    </operation>
+    <operation name="eliminarObservacion">
+      <input wsam:Action="http://WebService/WS_wfbs/eliminarObservacionRequest" message="tns:eliminarObservacion" />
+      <output wsam:Action="http://WebService/WS_wfbs/eliminarObservacionResponse" message="tns:eliminarObservacionResponse" />
+    </operation>
+    <operation name="modificarObservacion">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarObservacionRequest" message="tns:modificarObservacion" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarObservacionResponse" message="tns:modificarObservacionResponse" />
+    </operation>
+    <operation name="listarTiposUsuarios">
+      <input wsam:Action="http://WebService/WS_wfbs/listarTiposUsuariosRequest" message="tns:listarTiposUsuarios" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarTiposUsuariosResponse" message="tns:listarTiposUsuariosResponse" />
+    </operation>
+    <operation name="eliminarTipoUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/eliminarTipoUsuarioRequest" message="tns:eliminarTipoUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/eliminarTipoUsuarioResponse" message="tns:eliminarTipoUsuarioResponse" />
+    </operation>
+    <operation name="insertarObservacion">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarObservacionRequest" message="tns:insertarObservacion" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarObservacionResponse" message="tns:insertarObservacionResponse" />
+    </operation>
+    <operation name="modificarTipoUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarTipoUsuarioRequest" message="tns:modificarTipoUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarTipoUsuarioResponse" message="tns:modificarTipoUsuarioResponse" />
+    </operation>
+    <operation name="insertarTipoUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarTipoUsuarioRequest" message="tns:insertarTipoUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarTipoUsuarioResponse" message="tns:insertarTipoUsuarioResponse" />
+    </operation>
+    <operation name="buscarTipoUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/buscarTipoUsuarioRequest" message="tns:buscarTipoUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/buscarTipoUsuarioResponse" message="tns:buscarTipoUsuarioResponse" />
+    </operation>
+    <operation name="insertarCompetencia">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarCompetenciaRequest" message="tns:insertarCompetencia" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarCompetenciaResponse" message="tns:insertarCompetenciaResponse" />
+    </operation>
+    <operation name="listarPerfilCompetencia">
+      <input wsam:Action="http://WebService/WS_wfbs/listarPerfilCompetenciaRequest" message="tns:listarPerfilCompetencia" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarPerfilCompetenciaResponse" message="tns:listarPerfilCompetenciaResponse" />
+    </operation>
+    <operation name="insertarPerfilComp">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarPerfilCompRequest" message="tns:insertarPerfilComp" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarPerfilCompResponse" message="tns:insertarPerfilCompResponse" />
+    </operation>
+    <operation name="listarCompSegunPerfil">
+      <input wsam:Action="http://WebService/WS_wfbs/listarCompSegunPerfilRequest" message="tns:listarCompSegunPerfil" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarCompSegunPerfilResponse" message="tns:listarCompSegunPerfilResponse" />
+    </operation>
+    <operation name="eliminarPerfil">
+      <input wsam:Action="http://WebService/WS_wfbs/eliminarPerfilRequest" message="tns:eliminarPerfil" />
+      <output wsam:Action="http://WebService/WS_wfbs/eliminarPerfilResponse" message="tns:eliminarPerfilResponse" />
+    </operation>
+    <operation name="modificarPerfil">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarPerfilRequest" message="tns:modificarPerfil" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarPerfilResponse" message="tns:modificarPerfilResponse" />
+    </operation>
+    <operation name="buscarNivel">
+      <input wsam:Action="http://WebService/WS_wfbs/buscarNivelRequest" message="tns:buscarNivel" />
+      <output wsam:Action="http://WebService/WS_wfbs/buscarNivelResponse" message="tns:buscarNivelResponse" />
+    </operation>
+    <operation name="insertarNivel">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarNivelRequest" message="tns:insertarNivel" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarNivelResponse" message="tns:insertarNivelResponse" />
+    </operation>
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://WebService/WS_wfbs/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
+    </operation>
+    <operation name="insertarPerfil">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarPerfilRequest" message="tns:insertarPerfil" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarPerfilResponse" message="tns:insertarPerfilResponse" />
+    </operation>
+    <operation name="buscarTodoNivel">
+      <input wsam:Action="http://WebService/WS_wfbs/buscarTodoNivelRequest" message="tns:buscarTodoNivel" />
+      <output wsam:Action="http://WebService/WS_wfbs/buscarTodoNivelResponse" message="tns:buscarTodoNivelResponse" />
+    </operation>
+    <operation name="insertarPersona">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarPersonaRequest" message="tns:insertarPersona" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
+    </operation>
+    <operation name="modificarUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarUsuarioRequest" message="tns:modificarUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
+    </operation>
+    <operation name="listarPerfiles">
+      <input wsam:Action="http://WebService/WS_wfbs/listarPerfilesRequest" message="tns:listarPerfiles" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarPerfilesResponse" message="tns:listarPerfilesResponse" />
+    </operation>
+    <operation name="listarPersona">
+      <input wsam:Action="http://WebService/WS_wfbs/listarPersonaRequest" message="tns:listarPersona" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarPersonaResponse" message="tns:listarPersonaResponse" />
+    </operation>
+    <operation name="insertarUsuario">
+      <input wsam:Action="http://WebService/WS_wfbs/insertarUsuarioRequest" message="tns:insertarUsuario" />
+      <output wsam:Action="http://WebService/WS_wfbs/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    </operation>
+    <operation name="modificarNivel">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarNivelRequest" message="tns:modificarNivel" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarNivelResponse" message="tns:modificarNivelResponse" />
+    </operation>
+    <operation name="eliminarNivel">
+      <input wsam:Action="http://WebService/WS_wfbs/eliminarNivelRequest" message="tns:eliminarNivel" />
+      <output wsam:Action="http://WebService/WS_wfbs/eliminarNivelResponse" message="tns:eliminarNivelResponse" />
+    </operation>
+    <operation name="listarSexos">
+      <input wsam:Action="http://WebService/WS_wfbs/listarSexosRequest" message="tns:listarSexos" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarSexosResponse" message="tns:listarSexosResponse" />
+    </operation>
+    <operation name="listarComunas">
+      <input wsam:Action="http://WebService/WS_wfbs/listarComunasRequest" message="tns:listarComunas" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarComunasResponse" message="tns:listarComunasResponse" />
+    </operation>
+    <operation name="listarEstados">
+      <input wsam:Action="http://WebService/WS_wfbs/listarEstadosRequest" message="tns:listarEstados" />
+      <output wsam:Action="http://WebService/WS_wfbs/listarEstadosResponse" message="tns:listarEstadosResponse" />
+    </operation>
+    <operation name="modificarPersona">
+      <input wsam:Action="http://WebService/WS_wfbs/modificarPersonaRequest" message="tns:modificarPersona" />
+      <output wsam:Action="http://WebService/WS_wfbs/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
+    </operation>
+  </portType>
+  <binding name="WS_wfbsPortBinding" type="tns:WS_wfbs">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarObservaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCompetencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCompetencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCompetencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarObservacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarObservacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTiposUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarObservacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarTipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCompetencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPerfilCompetencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPerfilComp">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCompSegunPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarTodoNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPerfiles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSexos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarComunas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_wfbs">
+    <port name="WS_wfbsPort" binding="tns:WS_wfbsPortBinding">
+      <soap:address location="http://localhost:9106/ServicioWFBS/WS_wfbs" />
+    </port>
+  </service>
+</definitions>

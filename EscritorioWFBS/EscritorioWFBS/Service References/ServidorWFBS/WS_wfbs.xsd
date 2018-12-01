@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WebService/" targetNamespace="http://WebService/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="buscarNivel" type="tns:buscarNivel" />
+  <xs:element name="buscarNivelResponse" type="tns:buscarNivelResponse" />
+  <xs:element name="buscarTipoUsuario" type="tns:buscarTipoUsuario" />
+  <xs:element name="buscarTipoUsuarioResponse" type="tns:buscarTipoUsuarioResponse" />
+  <xs:element name="buscarTodoNivel" type="tns:buscarTodoNivel" />
+  <xs:element name="buscarTodoNivelResponse" type="tns:buscarTodoNivelResponse" />
+  <xs:element name="eliminarCompetencia" type="tns:eliminarCompetencia" />
+  <xs:element name="eliminarCompetenciaResponse" type="tns:eliminarCompetenciaResponse" />
+  <xs:element name="eliminarNivel" type="tns:eliminarNivel" />
+  <xs:element name="eliminarNivelResponse" type="tns:eliminarNivelResponse" />
+  <xs:element name="eliminarObservacion" type="tns:eliminarObservacion" />
+  <xs:element name="eliminarObservacionResponse" type="tns:eliminarObservacionResponse" />
+  <xs:element name="eliminarPerfil" type="tns:eliminarPerfil" />
+  <xs:element name="eliminarPerfilResponse" type="tns:eliminarPerfilResponse" />
+  <xs:element name="eliminarTipoUsuario" type="tns:eliminarTipoUsuario" />
+  <xs:element name="eliminarTipoUsuarioResponse" type="tns:eliminarTipoUsuarioResponse" />
+  <xs:element name="insertarCompetencia" type="tns:insertarCompetencia" />
+  <xs:element name="insertarCompetenciaResponse" type="tns:insertarCompetenciaResponse" />
+  <xs:element name="insertarNivel" type="tns:insertarNivel" />
+  <xs:element name="insertarNivelResponse" type="tns:insertarNivelResponse" />
+  <xs:element name="insertarObservacion" type="tns:insertarObservacion" />
+  <xs:element name="insertarObservacionResponse" type="tns:insertarObservacionResponse" />
+  <xs:element name="insertarPerfil" type="tns:insertarPerfil" />
+  <xs:element name="insertarPerfilComp" type="tns:insertarPerfilComp" />
+  <xs:element name="insertarPerfilCompResponse" type="tns:insertarPerfilCompResponse" />
+  <xs:element name="insertarPerfilResponse" type="tns:insertarPerfilResponse" />
+  <xs:element name="insertarPersona" type="tns:insertarPersona" />
+  <xs:element name="insertarPersonaResponse" type="tns:insertarPersonaResponse" />
+  <xs:element name="insertarTipoUsuario" type="tns:insertarTipoUsuario" />
+  <xs:element name="insertarTipoUsuarioResponse" type="tns:insertarTipoUsuarioResponse" />
+  <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
+  <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
+  <xs:element name="listarCompSegunPerfil" type="tns:listarCompSegunPerfil" />
+  <xs:element name="listarCompSegunPerfilResponse" type="tns:listarCompSegunPerfilResponse" />
+  <xs:element name="listarCompetencia" type="tns:listarCompetencia" />
+  <xs:element name="listarCompetenciaResponse" type="tns:listarCompetenciaResponse" />
+  <xs:element name="listarComunas" type="tns:listarComunas" />
+  <xs:element name="listarComunasResponse" type="tns:listarComunasResponse" />
+  <xs:element name="listarEstados" type="tns:listarEstados" />
+  <xs:element name="listarEstadosResponse" type="tns:listarEstadosResponse" />
+  <xs:element name="listarObservaciones" type="tns:listarObservaciones" />
+  <xs:element name="listarObservacionesResponse" type="tns:listarObservacionesResponse" />
+  <xs:element name="listarPerfilCompetencia" type="tns:listarPerfilCompetencia" />
+  <xs:element name="listarPerfilCompetenciaResponse" type="tns:listarPerfilCompetenciaResponse" />
+  <xs:element name="listarPerfiles" type="tns:listarPerfiles" />
+  <xs:element name="listarPerfilesResponse" type="tns:listarPerfilesResponse" />
+  <xs:element name="listarPersona" type="tns:listarPersona" />
+  <xs:element name="listarPersonaResponse" type="tns:listarPersonaResponse" />
+  <xs:element name="listarSexos" type="tns:listarSexos" />
+  <xs:element name="listarSexosResponse" type="tns:listarSexosResponse" />
+  <xs:element name="listarTiposUsuarios" type="tns:listarTiposUsuarios" />
+  <xs:element name="listarTiposUsuariosResponse" type="tns:listarTiposUsuariosResponse" />
+  <xs:element name="listarUsuarios" type="tns:listarUsuarios" />
+  <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse" />
+  <xs:element name="login" type="tns:login" />
+  <xs:element name="loginResponse" type="tns:loginResponse" />
+  <xs:element name="modificarCompetencia" type="tns:modificarCompetencia" />
+  <xs:element name="modificarCompetenciaResponse" type="tns:modificarCompetenciaResponse" />
+  <xs:element name="modificarNivel" type="tns:modificarNivel" />
+  <xs:element name="modificarNivelResponse" type="tns:modificarNivelResponse" />
+  <xs:element name="modificarObservacion" type="tns:modificarObservacion" />
+  <xs:element name="modificarObservacionResponse" type="tns:modificarObservacionResponse" />
+  <xs:element name="modificarPerfil" type="tns:modificarPerfil" />
+  <xs:element name="modificarPerfilResponse" type="tns:modificarPerfilResponse" />
+  <xs:element name="modificarPersona" type="tns:modificarPersona" />
+  <xs:element name="modificarPersonaResponse" type="tns:modificarPersonaResponse" />
+  <xs:element name="modificarTipoUsuario" type="tns:modificarTipoUsuario" />
+  <xs:element name="modificarTipoUsuarioResponse" type="tns:modificarTipoUsuarioResponse" />
+  <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
+  <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
+  <xs:complexType name="insertarObservacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mensaje_puntaje_superior" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje_puntaje_inferior" type="xs:string" />
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarObservacionResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSexos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarSexosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sexos" type="tns:sexo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sexo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPerfilCompetencia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPerfilCompetenciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="perfilCompetencia" type="tns:perfilCompRel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="perfilCompRel">
+    <xs:sequence>
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_perfil" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_tipo_usuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="eliminado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarTodoNivel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="buscarTodoNivelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivel">
+    <xs:sequence>
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_nota" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCompetencia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCompetenciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="competencia" type="tns:competencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="competencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion_competencia" type="xs:string" />
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="sigla_competencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarObservacion">
+    <xs:sequence>
+      <xs:element name="id_observacion" type="xs:int" />
+      <xs:element minOccurs="0" name="mensaje_puntaje_superior" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje_puntaje_inferior" type="xs:string" />
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarObservacionResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCompetencia">
+    <xs:sequence>
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="sigla_competencia" type="xs:string" />
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCompetenciaResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element name="usuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_tipo_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_tipo_usuario" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEstados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEstadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="estados" type="tns:estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarComunas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarComunasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comunas" type="tns:comuna" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comuna">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCompSegunPerfil">
+    <xs:sequence>
+      <xs:element name="id_perfil" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCompSegunPerfilResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comp" type="tns:perfilCompRel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTiposUsuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTiposUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tipoUsuario" type="tns:tipoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_tipoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPerfiles">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPerfilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="perfil" type="tns:perfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="perfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="abreviacion_perfil" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_perfil" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre_tipo_usuario" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarNivel">
+    <xs:sequence>
+      <xs:element name="id_nivel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarNivelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersona">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="persona" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido_materno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido_paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="email_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:string" />
+      <xs:element name="id_comuna" type="xs:int" />
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element name="id_sexo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="rut_jefe" type="xs:string" />
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_celular" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_fijo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="id_tipo_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarObservacion">
+    <xs:sequence>
+      <xs:element name="id_observacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarObservacionResponse">
+    <xs:sequence>
+      <xs:element name="eliminado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarUsuario">
+    <xs:sequence>
+      <xs:element name="id_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="id_tipo_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido_paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido_materno" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_fijo" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_celular" type="xs:string" />
+      <xs:element minOccurs="0" name="email_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo_persona" type="xs:string" />
+      <xs:element name="id_sexo" type="xs:int" />
+      <xs:element name="id_comuna" type="xs:int" />
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element minOccurs="0" name="rut_jefe" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre_perfil" type="xs:string" />
+      <xs:element minOccurs="0" name="abreviacion_perfil" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfilResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido_paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido_materno" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_fijo" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_celular" type="xs:string" />
+      <xs:element minOccurs="0" name="email_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo_persona" type="xs:string" />
+      <xs:element name="id_sexo" type="xs:int" />
+      <xs:element name="id_comuna" type="xs:int" />
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element minOccurs="0" name="rut_jefe" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarTipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="tns:tipoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNivel">
+    <xs:sequence>
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_nota" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNivelResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_tipo_usuario" type="xs:int" />
+      <xs:element name="id_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="rut_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfilComp">
+    <xs:sequence>
+      <xs:element name="id_perfil" type="xs:int" />
+      <xs:element name="id_comp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfilCompResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCompetencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion_competencia" type="xs:string" />
+      <xs:element minOccurs="0" name="sigla_competencia" type="xs:string" />
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCompetenciaResponse">
+    <xs:sequence>
+      <xs:element name="creado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPerfil">
+    <xs:sequence>
+      <xs:element name="ID_PERFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE_PERFIL" type="xs:string" />
+      <xs:element minOccurs="0" name="ABREVIACION_PERFIL" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPerfilResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCompetencia">
+    <xs:sequence>
+      <xs:element name="id_comp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCompetenciaResponse">
+    <xs:sequence>
+      <xs:element name="eliminado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarObservaciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarObservacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="observacion" type="tns:observacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="observacion">
+    <xs:sequence>
+      <xs:element name="id_comp" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_observacion" type="xs:int" />
+      <xs:element minOccurs="0" name="mensaje_puntaje_inferior" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje_puntaje_superior" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNivel">
+    <xs:sequence>
+      <xs:element name="id_nivel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNivelResponse">
+    <xs:sequence>
+      <xs:element name="eliminado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPerfil">
+    <xs:sequence>
+      <xs:element name="id_perfil" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPerfilResponse">
+    <xs:sequence>
+      <xs:element name="eliminado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNivel">
+    <xs:sequence>
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_nota" type="xs:string" />
+      <xs:element name="id_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNivelResponse">
+    <xs:sequence>
+      <xs:element name="modificado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
